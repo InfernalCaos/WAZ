@@ -1,4 +1,5 @@
-[README (1).md](https://github.com/user-attachments/files/32981188/README.1.md)
+<img width="900" height="600" alt="logo" src="https://github.com/user-attachments/assets/be05a0c4-0ffe-4034-995a-fc91a9b9b3a9" />
+
 <p align="center"><img src="logo.png" alt="WAZ" width="420"></p>
 
 <h1 align="center">WAZ · Glass</h1>
