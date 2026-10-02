@@ -1,30 +1,68 @@
-<p align="center"><img src="assets/banner.png" alt="WAZ" width="100%"></p>
-WAZ · Glass
-Wallpapers animados em loop na Nova Guia do Chrome, com busca em vidro, atalhos, relógio e cores personalizáveis.
-Recursos
-Vídeo (MP4/WebM), GIF e imagem como wallpaper, em loop e com transição suave
-Galeria de wallpapers, com troca automática opcional
-Busca em vidro que brilha com a cor do vídeo (ou a cor que você escolher)
-Relógio opcional com fonte do computador ou enviada por você
-100% local: nenhum dado sai do seu navegador
-Instalar (fácil)
-Abra a aba Releases e baixe o arquivo WAZ-chrome-store.zip.
-Clique com o botão direito no zip e escolha Extrair tudo.
-Abra `chrome://extensions` e ative o Modo do desenvolvedor.
-Clique em Carregar sem compactação e selecione a pasta extraída (a que contém o `manifest.json`).
-Abra uma nova aba.
-> Se baixar pelo botão verde **Code > Download ZIP**, extraia e selecione a pasta `extension/`.
-Estrutura
+[README (1).md](https://github.com/user-attachments/files/32981188/README.1.md)
+<p align="center"><img src="logo.png" alt="WAZ" width="420"></p>
+
+<h1 align="center">WAZ · Glass</h1>
+
+<p align="center">Wallpapers animados em loop na <b>Nova Guia</b> do Chrome, com busca em vidro, atalhos, relógio e cores personalizáveis.</p>
+
+---
+
+## ✨ Recursos
+- Vídeo (MP4/WebM), GIF ou imagem como wallpaper, em loop e com transição suave
+- Galeria de wallpapers, com troca automática opcional
+- Busca em vidro que brilha com a cor do vídeo (ou a cor que você escolher)
+- Relógio opcional com fonte do computador ou enviada por você
+- Controle de tamanho da busca, dos atalhos e do relógio
+- 100% local: nenhum dado sai do seu navegador
+
+## 📥 Instalação passo a passo
+
+### 1. Baixar
+1. Acesse a aba **[Releases](../../releases/latest)** deste repositório.
+2. Em **Assets**, clique em **WAZ-chrome-store.zip** para baixar.
+
+### 2. Extrair
+1. Abra a pasta **Downloads**.
+2. Clique com o botão direito em `WAZ-chrome-store.zip` e escolha **Extrair tudo...**
+3. Clique em **Extrair**. Confira se, dentro da pasta, aparecem os arquivos `manifest.json`, `newtab.html` e `newtab.js`.
+
+> ⚠️ O Chrome **não** lê arquivos de dentro do zip. É preciso extrair antes.
+
+### 3. Carregar no Chrome
+1. Abra o Chrome e digite `chrome://extensions` na barra de endereço.
+2. Ative o **Modo do desenvolvedor** (canto superior direito).
+3. Clique em **Carregar sem compactação**.
+4. Selecione a pasta extraída (a que contém o `manifest.json`) e clique em **Selecionar pasta**.
+
+### 4. Usar
+1. Abra uma nova aba (`Ctrl + T`).
+2. Passe o mouse no canto inferior direito e clique no botão de vídeo para abrir o painel.
+3. Clique em **+ Adicionar vídeo, GIF ou imagem** (ou arraste o arquivo para a tela).
+4. Ajuste cores, tamanhos e relógio como quiser.
+
+> Instalou pelo botão verde **Code > Download ZIP**? Extraia e selecione a pasta `extension/`.
+
+## ❓ Problemas comuns
+| Problema | Solução |
+|---|---|
+| "O arquivo de manifesto está faltando" | Você selecionou a pasta errada. Selecione a que contém o `manifest.json` diretamente. |
+| O vídeo não toca | Use MP4 (H.264) ou WebM. Vídeos em HEVC/H.265 não são suportados pelo Chrome. |
+| Aparece "Personalizar o Chrome" embaixo | É um rodapé nativo do Chrome. Clique com o botão direito nele e escolha **Ocultar rodapé na página Nova guia**. |
+| Perdi meus wallpapers | O Chrome guarda os dados por instalação. Ao carregar de uma pasta nova, adicione-os de novo. |
+
+## 🔄 Atualizar
+Baixe a nova versão em **Releases**, substitua os arquivos da pasta antiga e clique em **↻ Recarregar** na extensão em `chrome://extensions`.
+
+## 🗂 Estrutura
 ```
 extension/   código da extensão (manifest, html, css, js, ícones)
-docs/        termos de uso e política de privacidade (GitHub Pages)
+docs/        termos de uso e política de privacidade
 store/       textos e checklist para a Chrome Web Store
-scripts/     build.sh gera o .zip para enviar à loja
+scripts/     build.sh gera o .zip para a loja
 ```
-Gerar o pacote da loja
-```bash
-bash scripts/build.sh   # cria dist/WAZ-chrome-store.zip
-```
-Limitações
-O Chrome não permite que extensões alterem a barra de abas/endereço, apenas a Nova Guia. O rodapé "Personalizar o Chrome" é nativo e pode ser ocultado pelo usuário (clique direito no rodapé).
-Termos de Uso · Política de Privacidade · Licença MIT
+
+## ⚠️ Limitações
+O Chrome só permite que extensões personalizem a **Nova Guia**, não a barra de abas e de endereço.
+
+---
+[Termos de Uso](docs/terms.md) · [Política de Privacidade](docs/privacy.md) · Licença MIT
