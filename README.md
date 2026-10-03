@@ -1,5 +1,3 @@
-<img width="900" height="600" alt="logo" src="https://github.com/user-attachments/assets/be05a0c4-0ffe-4034-995a-fc91a9b9b3a9" />
-
 <p align="center"><img src="logo.png" alt="WAZ" width="420"></p>
 
 <h1 align="center">WAZ · Glass</h1>
@@ -14,6 +12,9 @@
 - Busca em vidro que brilha com a cor do vídeo (ou a cor que você escolher)
 - Relógio opcional com fonte do computador ou enviada por você
 - Controle de tamanho da busca, dos atalhos e do relógio
+- Relógio digital ou **analógico** com neon, sombras, moldura de vidro, gradiente metálico e ponteiros suaves
+- Modo desempenho para vídeos mais fluidos (ativa sozinho se detectar travadas)
+- Funciona no **Chrome** e no **Firefox**
 - 100% local: nenhum dado sai do seu navegador
 
 ## 📥 Instalação passo a passo
@@ -43,12 +44,22 @@
 
 > Instalou pelo botão verde **Code > Download ZIP**? Extraia e selecione a pasta `extension/`.
 
+## 🦊 Instalação no Firefox
+1. Em **[Releases](../../releases/latest)**, baixe **WAZ-firefox.zip** e extraia.
+2. No Firefox, abra `about:debugging#/runtime/this-firefox`.
+3. Clique em **Carregar extensão temporária...** e selecione o arquivo `manifest.json` da pasta extraída.
+4. Abra uma nova aba.
+
+> No modo temporário o Firefox remove a extensão ao ser fechado. A instalação permanente exige assinatura pelo [addons.mozilla.org](https://addons.mozilla.org) (gratuito).
+> Limitações do Firefox: o cursor fica na barra de endereço ao abrir a aba (clique na busca para digitar) e a opção "Fontes do PC" não existe (use "Enviar fonte").
+
 ## ❓ Problemas comuns
 | Problema | Solução |
 |---|---|
 | "O arquivo de manifesto está faltando" | Você selecionou a pasta errada. Selecione a que contém o `manifest.json` diretamente. |
 | O vídeo não toca | Use MP4 (H.264) ou WebM. Vídeos em HEVC/H.265 não são suportados pelo Chrome. |
 | Aparece "Personalizar o Chrome" embaixo | É um rodapé nativo do Chrome. Clique com o botão direito nele e escolha **Ocultar rodapé na página Nova guia**. |
+| Erro depois de atualizar | Substitua os arquivos na pasta que o Chrome usa, clique em **↻** na extensão e depois em **Remover tudo** na tela de erros. A versão aparece no fim do painel da extensão. |
 | Perdi meus wallpapers | O Chrome guarda os dados por instalação. Ao carregar de uma pasta nova, adicione-os de novo. |
 
 ## 🔄 Atualizar
@@ -56,10 +67,11 @@ Baixe a nova versão em **Releases**, substitua os arquivos da pasta antiga e cl
 
 ## 🗂 Estrutura
 ```
-extension/   código da extensão (manifest, html, css, js, ícones)
+extension/   código da extensão (manifest do Chrome, html, css, js, ícones)
+firefox/     manifest.json específico do Firefox
 docs/        termos de uso e política de privacidade
 store/       textos e checklist para a Chrome Web Store
-scripts/     build.sh gera o .zip para a loja
+scripts/     build.sh gera os .zip (Chrome e Firefox)
 ```
 
 ## ⚠️ Limitações
